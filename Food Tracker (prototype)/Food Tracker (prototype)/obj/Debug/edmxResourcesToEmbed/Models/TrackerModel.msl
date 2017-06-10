@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FoodTrackerDBModelStoreContainer" CdmEntityContainer="FoodTrackerDBEntities">
+    <EntitySetMapping Name="Historial_busqueda">
+      <EntityTypeMapping TypeName="FoodTrackerDBModel.Historial_busqueda">
+        <MappingFragment StoreEntitySet="Historial_busqueda">
+          <ScalarProperty Name="IdHistorial" ColumnName="IdHistorial" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Fecha_busqueda" ColumnName="Fecha_busqueda" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Tipo_comida" ColumnName="Tipo_comida" />
+          <ScalarProperty Name="Tipo_restaurante" ColumnName="Tipo_restaurante" />
+          <ScalarProperty Name="Tipo_ambiente" ColumnName="Tipo_ambiente" />
+          <ScalarProperty Name="Rango_precio" ColumnName="Rango_precio" />
+          <ScalarProperty Name="Medio_transporte" ColumnName="Medio_transporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurant">
+      <EntityTypeMapping TypeName="FoodTrackerDBModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="Valoracion" ColumnName="Valoracion" />
+          <ScalarProperty Name="Precio_maximo" ColumnName="Precio_maximo" />
+          <ScalarProperty Name="Precio_minimo" ColumnName="Precio_minimo" />
+          <ScalarProperty Name="idRestaurante" ColumnName="idRestaurante" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Tipo_comida" ColumnName="Tipo_comida" />
+          <ScalarProperty Name="Tipo_ambiente" ColumnName="Tipo_ambiente" />
+          <ScalarProperty Name="Tipo_restaurante" ColumnName="Tipo_restaurante" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="FoodTrackerDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Nombre_usuario" ColumnName="Nombre_usuario" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
