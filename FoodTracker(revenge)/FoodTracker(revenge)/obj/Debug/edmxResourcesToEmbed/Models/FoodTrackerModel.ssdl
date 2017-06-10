@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FoodTrackerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Historial_busqueda">
+    <Key>
+      <PropertyRef Name="IdHistorial" />
+    </Key>
+    <Property Name="IdHistorial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idUsuario" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha_busqueda" Type="varchar" MaxLength="50" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_comida" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_restaurante" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_ambiente" Type="varchar" MaxLength="50" />
+    <Property Name="Rango_precio" Type="varchar" MaxLength="50" />
+    <Property Name="Medio_transporte" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Restaurant">
+    <Key>
+      <PropertyRef Name="idRestaurante" />
+    </Key>
+    <Property Name="idRestaurante" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_comida" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_ambiente" Type="varchar" MaxLength="50" />
+    <Property Name="Tipo_restaurante" Type="varchar" MaxLength="50" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Precio_minimo" Type="money" />
+    <Property Name="Precio_maximo" Type="money" />
+    <Property Name="Valoracion" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Nombre_usuario" Type="varchar" MaxLength="50" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="50" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="FoodTrackerDBModelStoreContainer">
+    <EntitySet Name="Historial_busqueda" EntityType="Self.Historial_busqueda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

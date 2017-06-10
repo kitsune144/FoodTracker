@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FoodTrackerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Historial_busqueda">
+    <Key>
+      <PropertyRef Name="IdHistorial" />
+    </Key>
+    <Property Name="IdHistorial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_busqueda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_comida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_restaurante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_ambiente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rango_precio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Medio_transporte" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Restaurant">
+    <Key>
+      <PropertyRef Name="idRestaurante" />
+    </Key>
+    <Property Name="idRestaurante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_comida" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_ambiente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_restaurante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Precio_minimo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Precio_maximo" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Valoracion" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FoodTrackerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Historial_busqueda" EntityType="Self.Historial_busqueda" />
+    <EntitySet Name="Restaurant" EntityType="Self.Restaurant" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+  </EntityContainer>
+</Schema>
